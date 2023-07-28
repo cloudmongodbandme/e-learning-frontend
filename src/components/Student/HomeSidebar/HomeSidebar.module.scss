@@ -1,0 +1,54 @@
+.wrapper {
+    width: 28rem;
+    border-right: 1px solid rgb(231, 234, 240);
+    height: 100%;
+}
+
+.logo {
+    width: 100px;
+    padding: 16px 0 16px 24px;
+}
+.logo-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu {
+    margin: 16px 0 16px 8px;
+}
+.menu-item {
+    font-size: 2.4rem;
+    font-weight: 600;
+    padding: 1.4rem;
+    &::after {
+        content: '';
+        display: block;
+        background-color: var(--primary-color);
+        border-top-left-radius: 4px;
+    }
+    &:hover {
+        background-color: rgb(246, 246, 246);
+    }
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    padding-right: 8px;
+}
+.active {
+    position: relative;
+    background-color: rgb(246, 246, 246);
+
+    &::after {
+        content: '';
+        display: block;
+        background-color: var(primary-color);
+        height: 100%;
+        width: 8px;
+        right: 0;
+        top: 0;
+        position: absolute;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}

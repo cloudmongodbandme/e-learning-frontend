@@ -1,0 +1,77 @@
+.wrapper {
+    border-radius: 10px;
+    box-shadow: var(--gray-color-2) 0px 0.35rem 0px;
+    background-color: var(--light-gray-color);
+    padding: 16px 0 12px 12px;
+    border-bottom-width: 4px;
+    position: relative;
+    overflow: hidden;
+    min-height: 98px;
+    border-bottom-width: 4px;
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column-reverse;
+    &::before {
+        content: '';
+        background-image: var(--image-url);
+        transform: scaleX(1);
+        background-repeat: no-repeat;
+        background-size: 2.25rem;
+        background-position: right top;
+        position: absolute;
+        width: 100%;
+        color: rgb(246 246 246);
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        margin-top: 0.75rem;
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: var(--gray-color);
+    }
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: inline-block;
+}
+.left-content {
+    width: 90%;
+    padding-right: 8px;
+}
+.right-content {
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateX(50%) translateY(-50%);
+    aspect-ratio: 1/1;
+}
+.image {
+    // transform: translateX(50%);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.progress {
+    margin-top: 15px;
+}
+
+.css-futumu-MuiLinearProgress-root {
+    border-radius: 10px;
+}
+#linearmui .MuiLinearProgress-root {
+    border-radius: 10px;
+}

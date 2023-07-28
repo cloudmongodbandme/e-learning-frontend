@@ -1,0 +1,33 @@
+.wrapper {
+    --height-nav: 92px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--height-nav);
+    padding: 0 16px;
+    width: 100%;
+}
+
+.icon {
+    font-size: 2.4rem;
+    line-height: var(--height-nav);
+
+    &:hover {
+        cursor: pointer;
+        color: rgba(0, 0, 0, 0.7);
+    }
+}
+.right-nav {
+    display: flex;
+    // display: inline-block;
+    align-items: center;
+    margin-right: 16px;
+}
+.user-icon {
+    border-radius: 50%;
+    border: 10px solid var(--gray-color);
+}
+.icon + .icon {
+    margin-left: 16px;
+}

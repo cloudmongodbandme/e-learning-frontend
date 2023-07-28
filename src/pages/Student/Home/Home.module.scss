@@ -1,0 +1,26 @@
+.wrapper {
+    margin: 0 32px 48px;
+}
+.boarding-tab {
+    // margin-bottom: px;
+    margin: 12px 0;
+}
+.progress-title {
+    display: flex;
+    justify-content: space-between;
+    // margin-bottom: 8px;
+}
+.recommend-title {
+    margin-top: 32px;
+}
+
+.recommend-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-action {
+    display: flex;
+    align-items: center;   
+}
