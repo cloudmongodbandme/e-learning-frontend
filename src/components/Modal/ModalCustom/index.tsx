@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './ModalCustom.module.scss';
-import { Box, Modal } from '@mui/material';
+import { Paper, Modal } from '@mui/material';
 import { ModalCustomProps } from '~/types/Modal';
 
 const cx = classNames.bind(styles);
@@ -16,13 +16,15 @@ function ModalCustom(props: ModalCustomProps) {
         boxShadow: 24,
         p: 4,
         borderRadius: '1.5rem',
+        maxHeight: '80vh',
+        overFlow: 'scroll',
     };
 
     return (
         <Modal open={open} className="modal-custom" onClose={onClose}>
-            <Box sx={style} className="wrapper">
+            <Paper sx={style} className="wrapper">
                 {children}
-            </Box>
+            </Paper>
         </Modal>
     );
 }

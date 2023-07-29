@@ -1,6 +1,17 @@
 import classNames from 'classnames/bind';
 import styles from './ModalContentCourse.module.scss';
-import { Box, List, ListItem, Modal, Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
+import {
+    Box,
+    List,
+    ListItem,
+    Modal,
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
+    TableRow,
+} from '@mui/material';
 import { ModalContentCourseProps } from '~/types/Modal';
 import { ModalCustom } from '~/components/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,17 +23,7 @@ const cx = classNames.bind(styles);
 
 function ModalContentCourse(props: ModalContentCourseProps) {
     const { open, onClose, course } = props;
-    const style = {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: 400,
-        bgcolor: 'background.paper',
-        boxShadow: 24,
-        p: 4,
-        borderRadius: '1.5rem',
-    };
+
     const Children = () => (
         <div className={cx('wrapper')}>
             <div className={cx('header-modal')}>
@@ -43,21 +44,23 @@ function ModalContentCourse(props: ModalContentCourseProps) {
                 </div>
             </div>
             <div className={cx('modal-content')}>
-                <Table>
-                    <TableBody>
-                        {course?.content?.map((item, index) => {
-                            return (
-                                <TableRow>
-                                    <TableCell>{item?.icon}</TableCell>
-                                    <TableCell>{item?.word}</TableCell>
-                                    <TableCell>{item?.mean}</TableCell>
-                                    <TableCell>{item?.pronounce}</TableCell>
-                                    <TableCell>{item?.sample}</TableCell>
-                                </TableRow>
-                            );
-                        })}
-                    </TableBody>
-                </Table>
+                <TableContainer>
+                    <Table>
+                        <TableBody>
+                            {course?.content?.map((item, index) => {
+                                return (
+                                    <TableRow>
+                                        <TableCell>{item?.icon}</TableCell>
+                                        <TableCell>{item?.word}</TableCell>
+                                        <TableCell>{item?.mean}</TableCell>
+                                        <TableCell>{item?.pronounce}</TableCell>
+                                        <TableCell>{item?.sample}</TableCell>
+                                    </TableRow>
+                                );
+                            })}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
             </div>
         </div>
     );
